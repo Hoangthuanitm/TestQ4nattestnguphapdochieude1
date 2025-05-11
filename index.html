@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>NAT-TEST 4Q #01（文法・読解）</title>
+    <title>総合テスト 言語知識・読解</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
@@ -78,11 +78,6 @@
             padding-bottom: 15px;
             border-bottom: 1px solid #E0E4EA;
         }
-        .question p {
-            margin: 0 0 10px 0;
-            font-size: 1em;
-            color: #333;
-        }
         .options {
             display: flex;
             flex-direction: column;
@@ -99,6 +94,35 @@
         .option label {
             font-size: 1em;
             color: #333;
+        }
+        .example {
+            background-color: #F9FAFB;
+            padding: 15px;
+            border-left: 4px solid #4A90E2;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        .image-placeholder {
+    width: 600px; /* Tăng chiều rộng */
+    height: 480px; /* Tăng chiều cao */
+    border: 1px dashed #D1D5DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    background-color: #F9FAFB;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
         h2 {
             background-color: #4A90E2;
@@ -223,6 +247,9 @@
         .timer.warning {
             background-color: #EF4444;
         }
+        audio {
+            display: none;
+        }
         .password-modal {
             display: none;
             position: fixed;
@@ -284,8 +311,8 @@
 </head>
 <body>
     <div class="header">
-        <h1>NAT-TEST 4Q #01</h1>
-        <h2>文法・読解</h2>
+        <h1>総合テスト</h1>
+        <h2>言語知識・読解</h2>
         <p>時間：60 分</p>
     </div>
 
@@ -311,10 +338,10 @@
     <div id="timer" class="timer" style="display: none;">Thời gian còn lại: 60:00</div>
 
     <div class="question-section">
-        <h2>問題Ⅰ．つぎの 文の（　）に なにを 入れますか。１、２、３、４から いちばん いい ものを ひとつ えらんで ください。（2*10=20点）</h2>
-        <div class="vietnamese">Hãy chọn đáp án đúng nhất từ 1 đến 4 để điền vào chỗ trống.</div>
+        <h2>問題１．（_____）に 何を 入れますか。１・２・３・４から いちばん いい ものを 一つ えらんで ください。（9×1=9）</h2>
+        <div class="vietnamese">Chọn đáp án phù hợp nhất để điền vào chỗ trống từ 1 đến 4.</div>
         <div class="question">
-            <p>1. わたしは 大学を 出たら、大きい 会社に 入って、家族（　）安心させたい。</p>
+            <p>１ばん: わたしは 大学を出たら、大きい 会社に 入って、家族かぞく（_____）安心あんじんさせたい。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q1-1" name="q1">
@@ -336,11 +363,11 @@
             <div class="answer-feedback" id="feedback-1"></div>
         </div>
         <div class="question">
-            <p>2. 山田さん（　）とても しんせつな 人です。</p>
+            <p>２ばん: A: 「かわい スカウトですね。」 B: 「ええ、友だち（_____）くれたんです。」</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q2-1" name="q2">
-                    <label for="q2-1">1. は</label>
+                    <label for="q2-1">1. に</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q2-2" name="q2">
@@ -352,413 +379,276 @@
                 </div>
                 <div class="option">
                     <input type="radio" id="q2-4" name="q2">
-                    <label for="q2-4">4. に</label>
+                    <label for="q2-4">4. で</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-2"></div>
         </div>
         <div class="question">
-            <p>3. 木村さん、きのう（　）いましたか。</p>
+            <p>３ばん: 先月は 恋人こいびとの 誕生日たんじょうびが あったから、１０万円（_____）使つかって しまいました。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q3-1" name="q3">
-                    <label for="q3-1">1. どこ</label>
+                    <label for="q3-1">1. も</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q3-2" name="q3">
-                    <label for="q3-2">2. だれ</label>
+                    <label for="q3-2">2. が</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q3-3" name="q3">
-                    <label for="q3-3">3. なに</label>
+                    <label for="q3-3">3. しか</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q3-4" name="q3">
-                    <label for="q3-4">4. いつ</label>
+                    <label for="q3-4">4. まで</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-3"></div>
         </div>
         <div class="question">
-            <p>4. この ケーキ、（　）作りましたか。</p>
+            <p>４ばん: A: 「きれいな 部屋へやですね。ホテルの（_____）部屋へやですね。」 B: 「そうですか。ありがとうごさいます。」</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q4-1" name="q4">
-                    <label for="q4-1">1. どこで</label>
+                    <label for="q4-1">1. ような</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q4-2" name="q4">
-                    <label for="q4-2">2. だれが</label>
+                    <label for="q4-2">2. ように</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q4-3" name="q4">
-                    <label for="q4-3">3. いつ</label>
+                    <label for="q4-3">3. みたい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q4-4" name="q4">
-                    <label for="q4-4">4. なにで</label>
+                    <label for="q4-4">4. みたいに</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-4"></div>
         </div>
         <div class="question">
-            <p>5. たなかさんは いつも コーヒーを（　）。</p>
+            <p>５ばん: 朝は たいてい コーヒーを 飲のみますが、ときどき 紅茶こうちゃを（_____）ことが あります。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q5-1" name="q5">
-                    <label for="q5-1">1. 飲む</label>
+                    <label for="q5-1">1. 飲のみ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q5-2" name="q5">
-                    <label for="q5-2">2. 食べる</label>
+                    <label for="q5-2">2. 飲のんだ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q5-3" name="q5">
-                    <label for="q5-3">3. 見る</label>
+                    <label for="q5-3">3. 飲のんで</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q5-4" name="q5">
-                    <label for="q5-4">4. 飲む</label>
+                    <label for="q5-4">4. 飲のむ</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-5"></div>
         </div>
         <div class="question">
-            <p>6. いま スーパーで やさいを（　）。</p>
+            <p>６ばん: A: 「だめですよ。ここには 車を（_____）と 書いて ありますよ。」 B: 「あ、本当ほんとうですね。じゃ、スーパーの 駐車場ちゅうしゃじょうに とめましょう。」</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q6-1" name="q6">
-                    <label for="q6-1">1. 見ます</label>
+                    <label for="q6-1">1. とめない</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q6-2" name="q6">
-                    <label for="q6-2">2. 食べます</label>
+                    <label for="q6-2">2. とめるな</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q6-3" name="q6">
-                    <label for="q6-3">3. 買います</label>
+                    <label for="q6-3">3. とめて</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q6-4" name="q6">
-                    <label for="q6-4">4. 飲みます</label>
+                    <label for="q6-4">4. とめる</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-6"></div>
         </div>
         <div class="question">
-            <p>7. わたしは 毎朝 7時に（　）。</p>
+            <p>７ばん: 午後から 雨ですから、かさを 持って（_____）ほうが いいですよ。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q7-1" name="q7">
-                    <label for="q7-1">1. 寝ます</label>
+                    <label for="q7-1">1. あげた</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q7-2" name="q7">
-                    <label for="q7-2">2. 起きます</label>
+                    <label for="q7-2">2. きいた</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q7-3" name="q7">
-                    <label for="q7-3">3. 食べます</label>
+                    <label for="q7-3">3. いった</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q7-4" name="q7">
-                    <label for="q7-4">4. 飲みます</label>
+                    <label for="q7-4">4. みた</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-7"></div>
         </div>
         <div class="question">
-            <p>8. きのう、ともだちと えいがを（　）。</p>
+            <p>８ばん: A: 「どうして その アパートに 引ひっ越こしたんですか。」 B: 「駅から（_____）、家賃やちんも 安やすいからです。」</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q8-1" name="q8">
-                    <label for="q8-1">1. 見ました</label>
+                    <label for="q8-1">1. 近ちかいし</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q8-2" name="q8">
-                    <label for="q8-2">2. 食べました</label>
+                    <label for="q8-2">2. 近ちかいか</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q8-3" name="q8">
-                    <label for="q8-3">3. 飲みました</label>
+                    <label for="q8-3">3. 近ちかいで</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q8-4" name="q8">
-                    <label for="q8-4">4. 買いました</label>
+                    <label for="q8-4">4. 近ちかいに</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-8"></div>
         </div>
         <div class="question">
-            <p>9. しごとが（　）、わたしは とても うれしいです。</p>
+            <p>９ばん: どんなに（_____）最後さいごまで がんばります。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q9-1" name="q9">
-                    <label for="q9-1">1. 大変くても</label>
+                    <label for="q9-1">1. 大変たいへんくても</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q9-2" name="q9">
-                    <label for="q9-2">2. 大変なら</label>
+                    <label for="q9-2">2. 大変たいへんだっても</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q9-3" name="q9">
-                    <label for="q9-3">3. 大変で</label>
+                    <label for="q9-3">3. 大変たいへんでも</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q9-4" name="q9">
-                    <label for="q9-4">4. 大変でも</label>
+                    <label for="q9-4">4. 大変たいへんかっても</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-9"></div>
         </div>
-        <div class="question">
-            <p>10. あした 雨が（　）、ピクニックに 行きません。</p>
-            <div class="options">
-                <div class="option">
-                    <input type="radio" id="q10-1" name="q10">
-                    <label for="q10-1">1. 降るなら</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q10-2" name="q10">
-                    <label for="q10-2">2. 降っても</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q10-3" name="q10">
-                    <label for="q10-3">3. 降れば</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q10-4" name="q10">
-                    <label for="q10-4">4. 降るのに</label>
-                </div>
-            </div>
-            <div class="answer-feedback" id="feedback-10"></div>
-        </div>
     </div>
 
     <div class="question-section">
-        <h2>問題Ⅱ．つぎの 文を 読んで、（　）に 入る いちばん いい ものを １、２、３、４から ひとつ えらんで ください。（2*5=10点）</h2>
-        <div class="vietnamese">Hãy đọc câu và chọn đáp án đúng nhất từ 1 đến 4 để điền vào chỗ trống.</div>
+        <h2>問題２．__★__ に 入る ものは どれですか。１・２・３・４から いちばん いい ものを 一つ えらんで ください。（6×1=6）</h2>
+        <div class="vietnamese">Chọn đáp án phù hợp nhất để điền vào chỗ trống __★__ từ 1 đến 4.</div>
         <div class="question">
-            <p>11. テストが むずかし（　）、ぜんぶ できました。</p>
-            <div class="options">
-                <div class="option">
-                    <input type="radio" id="q11-1" name="q11">
-                    <label for="q11-1">1. くて</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q11-2" name="q11">
-                    <label for="q11-2">2. くても</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q11-3" name="q11">
-                    <label for="q11-3">3. い</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q11-4" name="q11">
-                    <label for="q11-4">4. かった</label>
-                </div>
-            </div>
-            <div class="answer-feedback" id="feedback-11"></div>
-        </div>
-        <div class="question">
-            <p>12. この 本は おもしろ（　）です。</p>
-            <div class="options">
-                <div class="option">
-                    <input type="radio" id="q12-1" name="q12">
-                    <label for="q12-1">1. い</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q12-2" name="q12">
-                    <label for="q12-2">2. くて</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q12-3" name="q12">
-                    <label for="q12-3">3. かった</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q12-4" name="q12">
-                    <label for="q12-4">4. くても</label>
-                </div>
-            </div>
-            <div class="answer-feedback" id="feedback-12"></div>
-        </div>
-        <div class="question">
-            <p>13. この 部屋は とても（　）です。</p>
-            <div class="options">
-                <div class="option">
-                    <input type="radio" id="q13-1" name="q13">
-                    <label for="q13-1">1. きれい</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q13-2" name="q13">
-                    <label for="q13-2">2. きれいで</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q13-3" name="q13">
-                    <label for="q13-3">3. きれいな</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q13-4" name="q13">
-                    <label for="q13-4">4. きれいに</label>
-                </div>
-            </div>
-            <div class="answer-feedback" id="feedback-13"></div>
-        </div>
-        <div class="question">
-            <p>14. きのうは とても（　）でした。</p>
-            <div class="options">
-                <div class="option">
-                    <input type="radio" id="q14-1" name="q14">
-                    <label for="q14-1">1. さむい</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q14-2" name="q14">
-                    <label for="q14-2">2. さむくて</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q14-3" name="q14">
-                    <label for="q14-3">3. さむかった</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q14-4" name="q14">
-                    <label for="q14-4">4. さむく</label>
-                </div>
-            </div>
-            <div class="answer-feedback" id="feedback-14"></div>
-        </div>
-        <div class="question">
-            <p>15. この 映画は とても（　）です。</p>
-            <div class="options">
-                <div class="option">
-                    <input type="radio" id="q15-1" name="q15">
-                    <label for="q15-1">1. たのしい</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q15-2" name="q15">
-                    <label for="q15-2">2. たのしくて</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q15-3" name="q15">
-                    <label for="q15-3">3. たのしかった</label>
-                </div>
-                <div class="option">
-                    <input type="radio" id="q15-4" name="q15">
-                    <label for="q15-4">4. たのしく</label>
-                </div>
-            </div>
-            <div class="answer-feedback" id="feedback-15"></div>
-        </div>
-    </div>
-
-    <div class="question-section">
-        <h2>問題Ⅲ．つぎの 文を 読んで、（　）に 入る いちばん いい ものを １、２、３、４から ひとつ えらんで ください。（2*5=10点）</h2>
-        <div class="vietnamese">Hãy đọc câu và chọn đáp án đúng nhất từ 1 đến 4 để điền vào chỗ trống.</div>
-        <div class="question">
-            <p>16. 山田さんは（　）人です。</p>
+            <p>１ばん: 朝から 晩ばん _____ _____ __★__ _____ いないで、勉強べんきょうしなさい。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q16-1" name="q16">
-                    <label for="q16-1">1. しんせつな</label>
+                    <label for="q16-1">1. テレビ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q16-2" name="q16">
-                    <label for="q16-2">2. しんせつで</label>
+                    <label for="q16-2">2. 見て</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q16-3" name="q16">
-                    <label for="q16-3">3. しんせつに</label>
+                    <label for="q16-3">3. ばかり</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q16-4" name="q16">
-                    <label for="q16-4">4. しんせつ</label>
+                    <label for="q16-4">4. まで</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-16"></div>
         </div>
         <div class="question">
-            <p>17. この 店は（　）です。</p>
+            <p>２ばん: リンさんは、会社の 仕事で、 _____ _____ __★__ _____ と 言って いました。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q17-1" name="q17">
-                    <label for="q17-1">1. にぎやか</label>
+                    <label for="q17-1">1. なった</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q17-2" name="q17">
-                    <label for="q17-2">2. にぎやかで</label>
+                    <label for="q17-2">2. 行く</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q17-3" name="q17">
-                    <label for="q17-3">3. にぎやかな</label>
+                    <label for="q17-3">3. 大阪おおさかに</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q17-4" name="q17">
-                    <label for="q17-4">4. にぎやかに</label>
+                    <label for="q17-4">4. ことに</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-17"></div>
         </div>
         <div class="question">
-            <p>18. きのうは（　）でした。</p>
+            <p>３ばん: パーティーで _____ _____ __★__ _____ どうか わからない。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q18-1" name="q18">
-                    <label for="q18-1">1. あつい</label>
+                    <label for="q18-1">1. 歌うたう</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q18-2" name="q18">
-                    <label for="q18-2">2. あつくて</label>
+                    <label for="q18-2">2. が</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q18-3" name="q18">
-                    <label for="q18-3">3. あつかった</label>
+                    <label for="q18-3">3. マリアさん</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q18-4" name="q18">
-                    <label for="q18-4">4. あつく</label>
+                    <label for="q18-4">4. か</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-18"></div>
         </div>
         <div class="question">
-            <p>19. この 町は（　）です。</p>
+            <p>４ばん: 山田やまださんの _____ __★__ _____ _____ 古くないです。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q19-1" name="q19">
-                    <label for="q19-1">1. しずか</label>
+                    <label for="q19-1">1. カメラは</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q19-2" name="q19">
-                    <label for="q19-2">2. しずかで</label>
+                    <label for="q19-2">2. 使つかっている</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q19-3" name="q19">
-                    <label for="q19-3">3. しずかな</label>
+                    <label for="q19-3">3. わたしの</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q19-4" name="q19">
-                    <label for="q19-4">4. しずかに</label>
+                    <label for="q19-4">4. ほど</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-19"></div>
         </div>
         <div class="question">
-            <p>20. あの 人は（　）です。</p>
+            <p>５ばん: リンさんは、来月 _____ __★__ _____ _____ 行きたいそうです。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q20-1" name="q20">
-                    <label for="q20-1">1. げんき</label>
+                    <label for="q20-1">1. 家の 近ちかくの</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q20-2" name="q20">
-                    <label for="q20-2">2. げんきで</label>
+                    <label for="q20-2">2. 国へ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q20-3" name="q20">
-                    <label for="q20-3">3. げんきな</label>
+                    <label for="q20-3">3. 公園こうえんへ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q20-4" name="q20">
-                    <label for="q20-4">4. げんきに</label>
+                    <label for="q20-4">4. 帰ったら</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-20"></div>
@@ -766,114 +656,116 @@
     </div>
 
     <div class="question-section">
-        <h2>問題Ⅳ．つぎの 文を 読んで、（　）に 入る いちばん いい ものを １、２、３、４から ひとつ えらんで ください。（2*5=10点）</h2>
-        <div class="vietnamese">Hãy đọc câu và chọn đáp án đúng nhất từ 1 đến 4 để điền vào chỗ trống.</div>
+        <h2>問題３．（__21__）から（__25__）に 何を 入れますか。文章ぶんしょうの 意味いみを 考かんがええて、１・２・３・４から いちばん いい ものを 一つ えらんで ください。（8×1+1×2=10）</h2>
+        <div class="vietnamese">Chọn đáp án phù hợp nhất để điền vào chỗ trống từ 21 đến 25, dựa trên ý nghĩa của đoạn văn.</div>
         <div class="question">
-            <p>21. この 仕事は とても（　）です。</p>
+            <p>これは リンさんから 日本語学校の先生へ のメールです。</p>
+            <p>山田やまだ先生<br>先生、こんばんは。リンです。<br>今、△△学校から 家に（__21__）です。<br>電車の 中で この メールを 書いています。<br>午前は 日本語の 試験しけん、午後は 大学の 先生と 一人ずつ 話を しました。<br>日本語の 試験しけんは、読んで 答える 問題もんだい（__22__）で、漢字や ぶんぽうの 問題もんだいは ありませんでした。<br>この 大学に入りたい りゆうや、しょうらい どんな仕事が したいか などを 質問 されました。<br>山田やまだ先生と いっしょに（__23__）練習れんしゅうしたのに、どれくらい アルバイトを する つもりかは（__24__）。<br>△△学校に 入れるか どうかは、来月 １０日に わかります。わかったら また（__25__）思おもいます。<br>リン</p>
+            <p>２１ばん:</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q21-1" name="q21">
-                    <label for="q21-1">1. たいへん</label>
+                    <label for="q21-1">1. 帰った ところ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q21-2" name="q21">
-                    <label for="q21-2">2. たいへんで</label>
+                    <label for="q21-2">2. 帰る ところ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q21-3" name="q21">
-                    <label for="q21-3">3. たいへんな</label>
+                    <label for="q21-3">3. 帰って きた ところ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q21-4" name="q21">
-                    <label for="q21-4">4. たいへんに</label>
+                    <label for="q21-4">4. 帰って きて いる ところ</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-21"></div>
         </div>
         <div class="question">
-            <p>22. あの 山は（　）です。</p>
+            <p>２２ばん:</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q22-1" name="q22">
-                    <label for="q22-1">1. たかい</label>
+                    <label for="q22-1">1. から</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q22-2" name="q22">
-                    <label for="q22-2">2. たかくて</label>
+                    <label for="q22-2">2. ため</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q22-3" name="q22">
-                    <label for="q22-3">3. たかった</label>
+                    <label for="q22-3">3. ので</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q22-4" name="q22">
-                    <label for="q22-4">4. たかく</label>
+                    <label for="q22-4">4. ばかり</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-22"></div>
         </div>
         <div class="question">
-            <p>23. この 料理は（　）です。</p>
+            <p>２３ばん:</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q23-1" name="q23">
-                    <label for="q23-1">1. おいしい</label>
+                    <label for="q23-1">1. こんなに</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q23-2" name="q23">
-                    <label for="q23-2">2. おいしくて</label>
+                    <label for="q23-2">2. そんなに</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q23-3" name="q23">
-                    <label for="q23-3">3. おいしかった</label>
+                    <label for="q23-3">3. あんなに</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q23-4" name="q23">
-                    <label for="q23-4">4. おいしく</label>
+                    <label for="q23-4">4. どんなに</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-23"></div>
         </div>
         <div class="question">
-            <p>24. きのうの パーティーは（　）でした。</p>
+            <p>２４ばん:</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q24-1" name="q24">
-                    <label for="q24-1">1. たのしい</label>
+                    <label for="q24-1">1. 聞けました</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q24-2" name="q24">
-                    <label for="q24-2">2. たのしくて</label>
+                    <label for="q24-2">2. 聞かれました</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q24-3" name="q24">
-                    <label for="q24-3">3. たのしかった</label>
+                    <label for="q24-3">3. 聞けませんでした</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q24-4" name="q24">
-                    <label for="q24-4">4. たのしく</label>
+                    <label for="q24-4">4. 聞かれませんでした</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-24"></div>
         </div>
         <div class="question">
-            <p>25. この 道は（　）です。</p>
+            <p>２５ばん:</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q25-1" name="q25">
-                    <label for="q25-1">1. せまい</label>
+                    <label for="q25-1">1. ごれんらくして いただきたいと</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q25-2" name="q25">
-                    <label for="q25-2">2. せまくて</label>
+                    <label for="q25-2">2. ごれんらく させて いただきたいと</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q25-3" name="q25">
-                    <label for="q25-3">3. せまかった</label>
+                    <label for="q25-3">3. ごれんらくし あげたいと</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q25-4" name="q25">
-                    <label for="q25-4">4. せまく</label>
+                    <label for="q25-4">4. ごれんらくして もらいたいと</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-25"></div>
@@ -881,231 +773,242 @@
     </div>
 
     <div class="question-section">
-        <h2>問題Ⅴ．つぎの 文を 読んで、しつもんに こたえて ください。いちばん いい ものを １、２、３、４から ひとつ えらんで ください。（5*5=25点）</h2>
-        <div class="vietnamese">Hãy đọc đoạn văn và trả lời câu hỏi, chọn đáp án đúng nhất từ 1 đến 4.</div>
+        <h2>問題４．つぎの（１）から（４）の文章ぶんしょうを読んで、質問に答えてください。答えは、１・２・３・４から、いちばんいいものを一つえらんでください。（5×1=5）</h2>
+        <div class="vietnamese">Đọc các đoạn văn từ (1) đến (4) và trả lời câu hỏi. Chọn đáp án đúng nhất từ 1 đến 4.</div>
         <div class="question">
-            <p>わたしは 毎朝 6時に 起きます。そして、7時に 朝ごはんを 食べます。朝ごはんは いつも パンと コーヒーです。8時に 家を 出て、9時に 会社に 着きます。会社で 12時に 昼ごはんを 食べます。昼ごはんは たいてい お弁当です。夜は 7時に 家に 帰って、8時に 晩ごはんを 食べます。晩ごはんは ごはんと みそしるが 好きです。10時に 寝ます。</p>
-            <p>26. わたしは 毎朝 何時に 起きますか。</p>
+            <p>（１）<br>最近さいきん、日本ではコンビニを利用りようする人がふえました。コンビニには、せっけんなど毎日の生活せいかつで使つかうもの、野菜やさいや牛乳ぎゅうにゅうやすぐに食べられるものがおいてあるから、べんりです。日本には、年をとった人や一人ひとりで住すんでいる人、おっともつまもはたらいている家族かぞくが多おおくなりました。その人たちが、とおくのスーパーで安やすいものをたくさん買うより、ひつようなものだけをかんたんに買える店へ行ったほうがいいと考かんがえるようになったのです。</p>
+            <p>２６ばん: どうしてコンビニを利用りようする人がふえましたか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q26-1" name="q26">
-                    <label for="q26-1">1. 5時</label>
+                    <label for="q26-1">1. 安やすいものしか買いたくない人が多おおいから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q26-2" name="q26">
-                    <label for="q26-2">2. 6時</label>
+                    <label for="q26-2">2. スーパーよりコンビニのほうが安やすいから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q26-3" name="q26">
-                    <label for="q26-3">3. 7時</label>
+                    <label for="q26-3">3. 使つかうものだけ買いたい人がふえたから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q26-4" name="q26">
-                    <label for="q26-4">4. 8時</label>
+                    <label for="q26-4">4. コンビニには食べ物がおいてあるから</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-26"></div>
         </div>
         <div class="question">
-            <p>27. わたしの 朝ごはんは 何ですか。</p>
+            <p>（２）<br>仕事のやり方はまんなちがいます。会社にバリバリ形がたとコツコツ形がたのどちらのタイプの人がひつようなのでしょう。いつもわらって、いっしょけんめいバリバリがんばる人がいると、会社が明あかるくなるから、バリバリ形がたの人はとても大切たいせつです。でも、会社はおもしろいところで、同じタイプの人だけが集あつまっても、いい会社はできません。だから、言わないで一人でしずかにコツコツ仕事をする人も大切たいせつにしなければなりません。</p>
+            <p>２７ばん: いい会社かいしゃを作つくるには、どのような人がひつようですか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q27-1" name="q27">
-                    <label for="q27-1">1. ごはんと みそしる</label>
+                    <label for="q27-1">1. バリバリ形がたの人とコツコツ形がたの人</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q27-2" name="q27">
-                    <label for="q27-2">2. パンと コーヒー</label>
+                    <label for="q27-2">2. おもしろいタイプの人</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q27-3" name="q27">
-                    <label for="q27-3">3. お弁当</label>
+                    <label for="q27-3">3. バリバリ形がたの人だけ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q27-4" name="q27">
-                    <label for="q27-4">4. サラダ</label>
+                    <label for="q27-4">4. 同おなじタイプの人だけ</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-27"></div>
         </div>
         <div class="question">
-            <p>28. わたしは 何時に 会社に 着きますか。</p>
+            <p>（３）<br>＜TF野球やきゅうチームのみんなさんへ＞<br>次の練習れんしゅうは南みなみ運動場うんどうばでおこないます。南みなみ運動場は野田市のだしの運動場です。規則きそくがあるので注意ちゅういしてください。<br>その日、運動場入り口の駐車場ちゅうしゃじょうは使つかえません。もし車で来るときは、近ちかくのコインパーキング（1時間200円の駐車場ちゅうしゃじょう）を使つかってください。近ちかくに道みちにはとめないこと。近所近所の人がこまります。</p>
+            <p>２８ばん: 車で練習れんしゅうに行く人はどうしたらいいですか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q28-1" name="q28">
-                    <label for="q28-1">1. 7時</label>
+                    <label for="q28-1">1. 近所きんじょの人におねがいして、近ちかくの道みちに車をとめる</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q28-2" name="q28">
-                    <label for="q28-2">2. 8時</label>
+                    <label for="q28-2">2. 近ちかくのコインパーキングに車をとめる</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q28-3" name="q28">
-                    <label for="q28-3">3. 9時</label>
+                    <label for="q28-3">3. 南みなみ運動場の使つかっていないところに車をとめる</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q28-4" name="q28">
-                    <label for="q28-4">4. 10時</label>
+                    <label for="q28-4">4. お金をはらって、運動場入り口の駐車場ちゅうしゃじょうに車をとめる</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-28"></div>
         </div>
         <div class="question">
-            <p>29. わたしの 昼ごはんは たいてい 何ですか。</p>
+            <p>（４）<br>パンダは中国ちゅうごくの高い山の中にいて、毛けの色いろが白と黒くろにはっきりとわかれているめずらしい動物どうぶつとして知られている。そのパンダが２頭とう、去年きょねんの４月、この動物園どうぶつえんにやってきた。パンダは竹たけしか食べないと言われているが、ここでは何を食べているのだろう。この動物園どうぶつえんでは１日に２０kgから３０kgの竹たけを食べさせていて、そのほかにニンジンやリンゴなども３回かいから４回かい食べさせるそうだ。</p>
+            <p>２９ばん:</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q29-1" name="q29">
-                    <label for="q29-1">1. パンと コーヒー</label>
+                    <label for="q29-1">1. 竹たけも食べるが、ニンジンやリンゴなども食べている。</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q29-2" name="q29">
-                    <label for="q29-2">2. ごはんと みそしる</label>
+                    <label for="q29-2">2. 竹たけは食べないが、ニンジンやリンゴなどを食べている。</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q29-3" name="q29">
-                    <label for="q29-3">3. お弁当</label>
+                    <label for="q29-3">3. ニンジンやリンゴなどもあげているが、竹たけしか食べない。</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q29-4" name="q29">
-                    <label for="q29-4">4. サラダ</label>
+                    <label for="q29-4">4. ニンジンやリンゴは食べないが、竹たけは20㎏から30㎏食べている。</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-29"></div>
         </div>
+    </div>
+
+    <div class="question-section">
+        <h2>問題５．つぎの文章を読んで、質問に答えてください。答えは、１・２・３・４から、いちばんいいものを一つえらんでください。（5×2=10）</h2>
+        <div class="vietnamese">Đọc đoạn văn sau và trả lời câu hỏi. Chọn đáp án đúng nhất từ 1 đến 4.</div>
         <div class="question">
-            <p>30. わたしは 何時に 寝ますか。</p>
+            <p>30年ぐらい前、日本では、男性だんせいは60さいまで一つの会社につとめるのがふつうだった。そして、女性じょせいはけっこんしたり、子どもをうんだりしたら仕事をやめるのがふつうだった。つまが仕事をしなくても、おっとが会社からもらうお金があれば、家族かぞくみんながじゅうぶんに生活できたからだ。<br>お金をしんぱいしないで家族かぞくが安心あんじんして生活できたのは、①とてもいい時代じだいだったと思おもう。今のように、日本のけいざいが悪わるくなり、仕事でもらうお金が少なくなり、仕事がなくなったりする時代じだいとくらべると、ずっといいと思おもう。<br>でも、②そのころは、仕事がすきで、男性のようにはたらきたいと思おもっていた女性じょせいには、いやな時代じだいだったらしい。<br>今は、おっとが仕事でもらうお金だけでは生活せいかつできなくなってきたので、女性じょせいは、けっこんしてからも仕事をつづけるようになった。すると、今度こんどは、むかしとはんたいの考かんがえの人がふえてきた。わかい女性じょせいは、けっこんしたら家にいて、子どもをそだてながら仕事以外いがいのことでがんばりたいと考かんがえるようになり、わかい男性だんせいは、自分じぶんも家の仕事をてつだうから、女性じょせいにもずっとはたらいてと思おもうようになってきたのだ。</p>
+            <p>３０ばん: どうして、①とてもいい時代じだいだったと思おもっているのですか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q30-1" name="q30">
-                    <label for="q30-1">1. 8時</label>
+                    <label for="q30-1">1. 男性だんせいが家の仕事をてつだうのがふつうだったから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q30-2" name="q30">
-                    <label for="q30-2">2. 9時</label>
+                    <label for="q30-2">2. お金のしんぱいをしないで家族かぞくが安心あんじんして生活せいかつできたから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q30-3" name="q30">
-                    <label for="q30-3">3. 10時</label>
+                    <label for="q30-3">3. 仕事のすきな女性じょせいは男性だんせいのようにはたらくことができたから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q30-4" name="q30">
-                    <label for="q30-4">4. 11時</label>
+                    <label for="q30-4">4. 仕事でもらえるお金が少なくなっても、仕事はなくならなかったから</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-30"></div>
         </div>
-    </div>
-
-    <div class="question-section">
-        <h2>問題Ⅵ．つぎの 文を 読んで、しつもんに こたえて ください。いちばん いい ものを １、２、３、４から ひとつ えらんで ください。（5*5=25点）</h2>
-        <div class="vietnamese">Hãy đọc đoạn văn và trả lời câu hỏi, chọn đáp án đúng nhất từ 1 đến 4.</div>
         <div class="question">
-            <p>山田さんは 日本の 大学生です。毎朝 7時に 起きて、8時に 大学に 行きます。大学で いろいろな 授業を 受けます。いちばん 好きな 授業は 歴史です。昼ごはんは 大学の 食堂で 食べます。たいてい カレーライスを 食べます。授業が 終わると、図書館で 勉強します。夜は アルバイトを します。アルバイトは コンビニで 働きます。週に 3回、月曜日、水曜日、金曜日に 働きます。家に 帰ると、テレビを 見て、11時に 寝ます。</p>
-            <p>31. 山田さんは 毎朝 何時に 起きますか。</p>
+            <p>３１ばん: ②そのころは、どんな時代じだいでしたか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q31-1" name="q31">
-                    <label for="q31-1">1. 6時</label>
+                    <label for="q31-1">1. おっとだけがはたらけば、家族かぞくみんなが生活せいかつできた時代じだい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q31-2" name="q31">
-                    <label for="q31-2">2. 7時</label>
+                    <label for="q31-2 значение="2. 今よりも日本のけいざいが悪わるくて、女性じょせいの仕事がなかった時代じだい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q31-3" name="q31">
-                    <label for="q31-3">3. 8時</label>
+                    <label for="q31-3">3. 女性じょせいも６０さいまで一つ会社につとめるのがふつうだった時代じだい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q31-4" name="q31">
-                    <label for="q31-4">4. 9時</label>
+                    <label for="q31-4">4. 男性だんせいも女性じょせいも、仕事でもらえるお金が少なくなってしまった時代じだい</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-31"></div>
         </div>
         <div class="question">
-            <p>32. 山田さんの いちばん 好きな 授業は 何ですか。</p>
+            <p>３２ばん: 仕事がすきな女性じょせいは、３０年前、どう思おもっていましたか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q32-1" name="q32">
-                    <label for="q32-1">1. 数学</label>
+                    <label for="q32-1">1. 家族かぞくにお金のしんぱいをさせないために仕事がしたい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q32-2" name="q32">
-                    <label for="q32-2">2. 歴史</label>
+                    <label for="q32-2">2. 子どもがうまれたら、仕事をやめて家の仕事をしたい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q32-3" name="q32">
-                    <label for="q32-3">3. 英語</label>
+                    <label for="q32-3">3. おっとは、もっとお金がもらえるようにがんばってほしい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q32-4" name="q32">
-                    <label for="q32-4">4. 科学</label>
+                    <label for="q32-4">4. 仕事がすきなのに、男性だんせいのようにはたらけなくてざんねんだ</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-32"></div>
         </div>
         <div class="question">
-            <p>33. 山田さんは 昼ごはんに たいてい 何を 食べますか。</p>
+            <p>３３ばん: 今は、どんな考かんがえのわかい女性じょせいがふえていますか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q33-1" name="q33">
-                    <label for="q33-1">1. うどん</label>
+                    <label for="q33-1">1. 外ではたらくよりも、家の仕事をしたい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q33-2" name="q33">
-                    <label for="q33-2">2. カレーライス</label>
+                    <label for="q33-2">2. 家の仕事をするよりも、外ではたらきたい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q33-3" name="q33">
-                    <label for="q33-3">3. サンドイッチ</label>
+                    <label for="q33-3">3. 女性じょせいが外ではたらけるように、男性だんせいは家の仕事をてつだってほしい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q33-4" name="q33">
-                    <label for="q33-4">4. ラーメン</label>
+                    <label for="q33-4">4. 男性だんせいは、同おなじ会社ではたらく女性じょせいをもっと大切たいせつにしてほしい</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-33"></div>
         </div>
+    </div>
+
+    <div class="question-section">
+        <h2>問題６．次のページの「留学生りゅうがくせいのための日本文化ぶんか教室」の案内あんないを見て、質問に答えてください。答えは、１・２・３・４から、いちばんいいものをひとつえらんでください。（2×1=2）</h2>
+        <div class="vietnamese">Xem thông báo về "Lớp học văn hóa Nhật Bản dành cho du học sinh" và trả lời câu hỏi. Chọn đáp án đúng nhất từ 1 đến 4.</div>
         <div class="question">
-            <p>34. 山田さんは どこで アルバイトを しますか。</p>
+       <div class="image-placeholder">
+                <img src="https://raw.githubusercontent.com/Hoangthuanitm/image/refs/heads/main/Mondai6Q4nattestde1.png">
+            </div>
+            <p>３４ばん: 日本語学校に通かよっているマリアさんは、学校が休みの日に日本の文化ぶんかを習ならいたいと思おもっています。学校は土曜日どようびと日曜日にちようびが休みです。少しでも安やすいほうがいいです。どの教室がいちばんいいですか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q34-1" name="q34">
-                    <label for="q34-1">1. レストラン</label>
+                    <label for="q34-1">1. いけ花ばな</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q34-2" name="q34">
-                    <label for="q34-2">2. コンビニ</label>
+                    <label for="q34-2">2. 日本料理りょうりのマナー</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q34-3" name="q34">
-                    <label for="q34-3">3. スーパー</label>
+                    <label for="q34-3">3. 着物きものの着付きつけ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q34-4" name="q34">
-                    <label for="q34-4">4. 図書館</label>
+                    <label for="q34-4">4. すし作づくり</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-34"></div>
         </div>
         <div class="question">
-            <p>35. 山田さんは アルバイトを 週に 何回 しますか。</p>
+            <p>３５ばん: 日本の大学で勉強べんきょうしているアレンさんは、平日へいじつの夕方、大学の帰りに何か習ならいたいと思おもっています。大学の授業じゅぎょうは平日へいじつ5時までです。アレンさんの趣味しゅみは料理りょうりで、日本の料理りょうりを作つくれるようになりたいと思おもっています。どの教室がいちばんいいですか。</p>
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q35-1" name="q35">
-                    <label for="q35-1">1. 2回</label>
+                    <label for="q35-1">1. いけ花ばな</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q35-2" name="q35">
-                    <label for="q35-2">2. 3回</label>
+                    <label for="q35-2">2. 日本料理りょうりのマナー</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q35-3" name="q35">
-                    <label for="q35-3">3. 4回</label>
+                    <label for="q35-3">3. 着物きものの着付きつけ</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q35-4" name="q35">
-                    <label for="q35-4">4. 5回</label>
+                    <label for="q35-4">4. すし作づくり</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-35"></div>
@@ -1137,9 +1040,10 @@
     </footer>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
 
+        // Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyAfy4QMD9_7PyFHpInNdKDRWuW4AYCtLJ4",
             authDomain: "history-e4633.firebaseapp.com",
@@ -1150,23 +1054,31 @@
             measurementId: "G-DC055090BW"
         };
 
+        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
+        // Placeholder answer key (replace with actual answers)
         const answerKey = {
-            1: 4, 2: 1, 3: 1, 4: 2, 5: 4, 6: 3, 7: 2, 8: 1, 9: 4, 10: 3,
-            11: 2, 12: 1, 13: 1, 14: 3, 15: 1, 16: 1, 17: 3, 18: 3, 19: 3, 20: 3,
-            21: 3, 22: 1, 23: 1, 24: 3, 25: 1, 26: 2, 27: 2, 28: 3, 29: 3, 30: 3,
-            31: 2, 32: 2, 33: 2, 34: 2, 35: 2
+            1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1,
+            16: 1, 17: 1, 18: 1, 19: 1, 20: 1,
+            21: 1, 22: 1, 23: 1, 24: 1, 25: 1,
+            26: 1, 27: 1, 28: 1, 29: 1,
+            30: 1, 31: 1, 32: 1, 33: 1,
+            34: 1, 35: 1
         };
 
         const sectionPoints = {
-            1: 20,
-            2: 10,
-            3: 10,
-            4: 10,
-            5: 25,
-            6: 25
+            1: 9, 2: 6, 3: 10, 4: 5, 5: 10, 6: 2
+        };
+
+        const questionPoints = {
+            1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 2,
+            16: 1, 17: 1, 18: 1, 19: 1, 20: 1,
+            21: 1, 22: 1, 23: 1, 24: 1, 25: 2,
+            26: 1, 27: 1, 28: 1, 29: 1,
+            30: 2, 31: 2, 32: 2, 33: 2,
+            34: 1, 35: 1
         };
 
         let startTime = null;
@@ -1184,14 +1096,14 @@
             return 'F';
         }
 
-        function calculateRadioSectionScore(startQuestion, endQuestion, pointsPerQuestion) {
+        function calculateRadioSectionScore(startQuestion, endQuestion, sectionNumber) {
             let score = 0;
             for (let i = startQuestion; i <= endQuestion; i++) {
                 const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
                 if (selectedOption) {
                     const userAnswer = parseInt(selectedOption.id.split('-')[1]);
                     if (userAnswer === answerKey[i]) {
-                        score += pointsPerQuestion;
+                        score += questionPoints[i];
                     }
                     showRadioAnswerFeedback(i);
                 }
@@ -1229,7 +1141,6 @@
             timerInterval = setInterval(() => {
                 const now = new Date();
                 const timeLeft = endTime - now;
-
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     timerElement.textContent = 'Hết giờ!';
@@ -1237,11 +1148,9 @@
                     submitTest();
                     return;
                 }
-
                 const minutes = Math.floor(timeLeft / 1000 / 60);
                 const seconds = Math.floor((timeLeft / 1000) % 60);
                 timerElement.textContent = `Thời gian còn lại: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-
                 if (timeLeft <= 5 * 60 * 1000) {
                     timerElement.classList.add('warning');
                 }
@@ -1251,11 +1160,10 @@
         function checkPassword() {
             const passwordInput = document.getElementById('password-input').value;
             const passwordError = document.getElementById('password-error');
-
             if (passwordInput === '112') {
                 window.location.href = 'history.html';
             } else {
-                passwordError.textContent = 'パスワードが違います。もう一度試してください。 (Mật khẩu không đúng. Vui lòng thử lại.)';
+                passwordError.textContent = 'Mật khẩu không đúng. Vui lòng thử lại.';
                 document.getElementById('password-input').value = '';
             }
         }
@@ -1271,6 +1179,7 @@
             document.getElementById('password-error').textContent = '';
         }
 
+        // Make functions available globally for HTML onclick
         window.checkPassword = checkPassword;
         window.showPasswordModal = showPasswordModal;
         window.closePasswordModal = closePasswordModal;
@@ -1286,7 +1195,7 @@
             const scoreDisplay = document.getElementById('score-display');
 
             if (!name || !className || !dateInput) {
-                messageResult.textContent = 'Vui lòng điền đầy đủ thông tin cá nhân: Tên, Lớp, và Ngày.';
+                messageResult.textContent = 'Vui lòng điền đầy đủ thông tin cá nhân.';
                 return;
             }
 
@@ -1294,15 +1203,14 @@
             document.getElementById('timer').style.display = 'none';
             document.getElementById('submit-test').style.display = 'none';
 
-            const section1Score = calculateRadioSectionScore(1, 10, 2);
-            const section2Score = calculateRadioSectionScore(11, 15, 2);
-                        const section3Score = calculateRadioSectionScore(16, 20, 2);
-            const section4Score = calculateRadioSectionScore(21, 25, 2);
-            const section5Score = calculateRadioSectionScore(26, 30, 5);
-            const section6Score = calculateRadioSectionScore(31, 35, 5);
-
+            const section1Score = calculateRadioSectionScore(1, 9, 1);
+            const section2Score = calculateRadioSectionScore(16, 20, 2);
+            const section3Score = calculateRadioSectionScore(21, 25, 3);
+            const section4Score = calculateRadioSectionScore(26, 29, 4);
+            const section5Score = calculateRadioSectionScore(30, 33, 5);
+            const section6Score = calculateRadioSectionScore(34, 35, 6);
             const totalScore = section1Score + section2Score + section3Score + section4Score + section5Score + section6Score;
-            const percentage = Math.round((totalScore / 100) * 100);
+            const percentage = Math.round((totalScore / 40) * 100);
             const evaluation = getEvaluation(percentage);
             const rankClass = evaluation === 'A' ? 'rank-a' : evaluation === 'F' ? 'rank-f' : '';
 
@@ -1315,12 +1223,12 @@
                 <table class="result-table">
                     <thead>
                         <tr>
-                            <th>問題 I</th>
-                            <th>問題 II</th>
-                            <th>問題 III</th>
-                            <th>問題 IV</th>
-                            <th>問題 V</th>
-                            <th>問題 VI</th>
+                            <th>問題 1</th>
+                            <th>問題 2</th>
+                            <th>問題 3</th>
+                            <th>問題 4</th>
+                            <th>問題 5</th>
+                            <th>問題 6</th>
                             <th>Tổng</th>
                             <th>Tỷ lệ</th>
                             <th>Xếp loại</th>
@@ -1334,7 +1242,7 @@
                             <td>${section4Score}/${sectionPoints[4]}</td>
                             <td>${section5Score}/${sectionPoints[5]}</td>
                             <td>${section6Score}/${sectionPoints[6]}</td>
-                            <td>${totalScore}/100</td>
+                            <td>${totalScore}/40</td>
                             <td>${percentage}%</td>
                             <td class="${rankClass}">${evaluation}</td>
                         </tr>
@@ -1370,6 +1278,25 @@
                 console.error('Lỗi khi lưu vào Firestore:', error);
                 messageResult.textContent = 'Đã xảy ra lỗi khi lưu kết quả. Vui lòng thử lại.';
             }
+
+            const testHistory = JSON.parse(localStorage.getItem('testHistoryReading') || '[]');
+            testHistory.push({
+                startTime: formatTime(startTime),
+                endTime: formatTime(endTime),
+                date: dateInput,
+                name,
+                className,
+                section1: section1Score,
+                section2: section2Score,
+                section3: section3Score,
+                section4: section4Score,
+                section5: section5Score,
+                section6: section6Score,
+                totalScore,
+                percentage,
+                evaluation
+            });
+            localStorage.setItem('testHistoryReading', JSON.stringify(testHistory));
         }
 
         function resetTest() {
@@ -1408,7 +1335,7 @@
                 return;
             }
 
-            messageInfo.textContent = '';
+                        messageInfo.textContent = '';
             document.getElementById('start-test').style.display = 'none';
             document.getElementById('history-test').style.display = 'none';
             document.querySelectorAll('.question-section').forEach(section => {
@@ -1420,6 +1347,10 @@
         });
 
         document.getElementById('submit-test').addEventListener('click', submitTest);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // No audio needed for this reading test
+        });
     </script>
 </body>
 </html>
