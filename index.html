@@ -338,7 +338,7 @@
     <div id="timer" class="timer" style="display: none;">Thời gian còn lại: 60:00</div>
 
     <div class="question-section">
-        <h2>問題１．（_____）に 何を 入れますか。１・２・３・４から いちばん いい ものを 一つ えらんで ください。（9×1=9）</h2>
+        <h2>問題１．（_____）に 何を 入れますか。１・２・３・４から いちばん いい ものを 一つ えらんで ください。（15×1=15）</h2>
         <div class="vietnamese">Chọn đáp án phù hợp nhất để điền vào chỗ trống từ 1 đến 4.</div>
         <div class="question">
             <p>１ばん: わたしは 大学を出たら、大きい 会社に 入って、<ruby>家族<rt>かぞく</rt></ruby>（_____）<ruby>安心<rt>あんしん</rt></ruby>させたい。</p>
@@ -1069,7 +1069,7 @@
         };
 
         const sectionPoints = {
-            1: 9, 2: 6, 3: 10, 4: 5, 5: 10, 6: 2
+            1: 15, 2: 6, 3: 10, 4: 5, 5: 10, 6: 2
         };
 
         const questionPoints = {
@@ -1203,14 +1203,14 @@
             document.getElementById('timer').style.display = 'none';
             document.getElementById('submit-test').style.display = 'none';
 
-            const section1Score = calculateRadioSectionScore(1, 9, 1);
+            const section1Score = calculateRadioSectionScore(1, 15, 1);
             const section2Score = calculateRadioSectionScore(16, 20, 2);
             const section3Score = calculateRadioSectionScore(21, 25, 3);
             const section4Score = calculateRadioSectionScore(26, 29, 4);
             const section5Score = calculateRadioSectionScore(30, 33, 5);
             const section6Score = calculateRadioSectionScore(34, 35, 6);
             const totalScore = section1Score + section2Score + section3Score + section4Score + section5Score + section6Score;
-            const percentage = Math.round((totalScore / 40) * 100);
+            const percentage = Math.round((totalScore / 46) * 100);
             const evaluation = getEvaluation(percentage);
             const rankClass = evaluation === 'A' ? 'rank-a' : evaluation === 'F' ? 'rank-f' : '';
 
