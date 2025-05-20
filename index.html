@@ -103,34 +103,21 @@
             border-radius: 6px;
         }
        .image-placeholder {
-    width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
-    max-width: 100%; /* Đảm bảo không vượt quá khung cha */
-    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
-    aspect-ratio: 5 / 4; /* Duy trì tỷ lệ khung hình gần với 300px/240px */
-    border: 1px dashed #D1D5DB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    background-color: #F9FAFB;
-    font-size: 0.9em;
-    overflow: hidden; /* Ngăn hình ảnh tràn ra ngoài */
-}
-
+            width: 300px;
+            height: 240px;
+            border: 1px dashed #D1D5DB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            background-color: #F9FAFB;
+            font-size: 0.9em;
+            overflow: hidden;
+        }
 .image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Lấp đầy khung, cắt phần thừa nếu cần */
-    object-position: center; /* Căgiữa hình ảnh */
-}
-
-/* Media query cho màn hình điện thoại */
-@media (max-width: 600px) {
-    .image-placeholder {
-        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
-        aspect-ratio: 5 / 4; /* Giữ tỷ lệ khung hình */
-        margin: 10px 0; /* Giữ khoảng cách */
-    }
+    object-fit: contain;
 }
         .image-placeholder img {
             width: 100%;
@@ -807,7 +794,7 @@
         <div class="vietnamese">Chọn đáp án phù hợp nhất để điền vào chỗ trống từ 21 đến 25, dựa trên ý nghĩa của đoạn văn.</div>
         <div class="question">
             <p>これは リンさんから 日本語学校の先生へ のメールです。</p>
-            <p>山田やまだ先生<br>先生、こんばんは。リンです。<br>今、△△学校から 家に（__21__）です。<br>電車の 中で この メールを 書いています。<br>午前は 日本語の <ruby>試験<rt>しけん</rt></ruby>、午後は 大学の 先生と 一人ずつ 話を しました。<br>日本語の <ruby>試験<rt>しけん</rt></ruby>は、読んで 答える<ruby>問題<rt>もんだい</rt></ruby>（__22__）で、漢字や ぶんぽうの 問題は ありませんでした。<br>この 大学に入りたい りゆうや、しょうらい どんな仕事が したいか などを 質問 されました。<br>山田やまだ先生と いっしょに（__23__）<ruby>練習<rt>れんしゅう</rt></ruby>したのに、どれくらい アルバイトを する つもりかは（__24__）。<br>△△学校に 入れるか どうかは、来月 １０日に わかります。わかったら また（__25__）思もいます。<br>リン</p>
+            <p>山田やまだ先生<br>先生、こんばんは。リンです。<br>今、△△学校から 家に（__21__）です。<br>電車の 中で この メールを 書いています。<br>午前は 日本語の <ruby>試験<rt>しけん</rt></ruby>、午後は 大学の 先生と 一人ずつ 話を しました。<br>日本語の <ruby>試験<rt>しけん</rt></ruby>は、読んで 答える<ruby>問題<rt>もんだい</rt></ruby>（__22__）で、漢字や ぶんぽうの 問題もんだいは ありませんでした。<br>この 大学に入りたい りゆうや、しょうらい どんな仕事が したいか などを 質問 されました。<br>山田やまだ先生と いっしょに（__23__）<ruby>練習<rt>れんしゅう</rt></ruby>したのに、どれくらい アルバイトを する つもりかは（__24__）。<br>△△学校に 入れるか どうかは、来月 １０日に わかります。わかったら また（__25__）思おもいます。<br>リン</p>
             <p>２１ばん:</p>
             <div class="options">
                 <div class="option">
