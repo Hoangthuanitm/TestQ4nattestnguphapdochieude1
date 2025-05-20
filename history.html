@@ -59,7 +59,7 @@
         }
         .table-container {
             overflow-x: auto;
-            marginx
+            margin: 0; /* Fixed typo from marginx */
         }
         .history-table {
             width: 100%;
@@ -74,6 +74,9 @@
             min-width: 80px;
             max-width: 200px;
             overflow-wrap: break-word;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
         .history-table th {
             background-color: #4A90E2;
@@ -101,6 +104,11 @@
             margin-top: 15px;
             font-size: 0.95em;
         }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #4A90E2;
+        }
         .rank-a {
             color: #4A90E2;
             font-weight: 500;
@@ -108,6 +116,39 @@
         .rank-f {
             color: #EF4444;
             font-weight: 500;
+        }
+        .confirm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .confirm-modal-content {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: 100px auto;
+            text-align: center;
+        }
+        .confirm-modal-content button {
+            padding: 8px 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .confirm-modal-content .confirm-btn {
+            background-color: #EF4444;
+            color: #FFFFFF;
+        }
+        .confirm-modal-content .cancel-btn {
+            background-color: #6B7280;
+            color: #FFFFFF;
         }
         footer {
             text-align: center;
@@ -167,6 +208,14 @@
             </thead>
             <tbody id="history-table-body"></tbody>
         </table>
+    </div>
+
+    <div id="confirm-modal" class="confirm-modal">
+        <div class="confirm-modal-content">
+            <p>Bạn có chắc chắn muốn xóa kết quả này không?</p>
+            <button id="confirm-delete" class="confirm-btn">Xóa</button>
+            <button id="cancel-delete" class="cancel-btn">Hủy</button>
+        </div>
     </div>
 
     <footer>
@@ -233,8 +282,10 @@
                 return;
             }
 
+            historyTableBody.innerHTML = '<tr><td colspan="15" class="loading">Đang tải...</td></tr>';
+
             try {
-                // Fetch data
+                // Fetch data from Firestore
                 const snapshot = await getDocs(collection(db, collectionName));
                 let testHistory = snapshot.docs.map(doc => ({
                     id: doc.id,
@@ -276,7 +327,7 @@
                             <td>${entry.className || 'N/A'}</td>
                             <td>${entry.section1 || 0}/${sectionPoints[1]}</td>
                             <td>${entry.section2 || 0}/${sectionPoints[2]}</td>
-                            <td>${entry.section3 || 0}/${sectionPoints[3]</td>
+                            <td>${entry.section3 || 0}/${sectionPoints[3]}</td>
                             <td>${entry.section4 || 0}/${sectionPoints[4]}</td>
                             <td>${entry.section5 || 0}/${sectionPoints[5]}</td>
                             <td>${entry.section6 || 0}/${sectionPoints[6]}</td>
@@ -305,26 +356,41 @@
                 return;
             }
 
-            if (confirm('Bạn có chắc chắn muốn xóa kết quả này không?')) {
+            const modal = document.getElementById('confirm-modal');
+            modal.style.display = 'block';
+
+            document.getElementById('confirm-delete').onclick = async () => {
                 try {
                     await deleteDoc(doc(db, collectionName, docId));
                     logEvent(analytics, 'delete_test_record', { doc_id: docId });
-                    renderHistoryTable(document.getElementById('search')?.value.trim() || '');
+                    renderHistoryTable(document.getElementById('search').value.trim());
+                    modal.style.display = 'none';
                 } catch (error) {
                     console.error('Delete error:', error);
                     document.getElementById('message').textContent = error.code === 'permission-denied'
                         ? 'Không có quyền xóa dữ liệu.'
                         : 'Lỗi khi xóa kết quả.';
+                    modal.style.display = 'none';
                 }
-            }
+            };
+
+            document.getElementById('cancel-delete').onclick = () => {
+                modal.style.display = 'none';
+            };
         }
 
         // Event listeners
         document.addEventListener('DOMContentLoaded', () => {
             renderHistoryTable();
             const searchInput = document.getElementById('search');
+            let debounceTimeout;
             if (searchInput) {
-                searchInput.addEventListener('input', () => renderHistoryTable(searchInput.value.trim()));
+                searchInput.addEventListener('input', () => {
+                    clearTimeout(debounceTimeout);
+                    debounceTimeout = setTimeout(() => {
+                        renderHistoryTable(searchInput.value.trim());
+                    }, 300);
+                });
             }
 
             document.getElementById('history-table-body').addEventListener('click', e => {
