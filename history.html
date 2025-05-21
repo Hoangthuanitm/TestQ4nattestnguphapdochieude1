@@ -251,7 +251,7 @@
         }
 
         // Constants
-        const sectionPoints = { 1: 15, 2: 15, 3: 15, 4: 15, 5: 30, 6: 10 };
+        const sectionPoints = { 1: 15, 2: 5, 3: 10, 4: 4, 5: 8, 6: 2 };
         const collectionName = 'testHistoryQ4Nattestnguphapdochieu-de1';
 
         // Utility functions
@@ -331,7 +331,7 @@
                             <td>${entry.section4 || 0}/${sectionPoints[4]}</td>
                             <td>${entry.section5 || 0}/${sectionPoints[5]}</td>
                             <td>${entry.section6 || 0}/${sectionPoints[6]}</td>
-                            <td>${entry.totalScore || 0}/100</td>
+                            <td>${entry.totalScore || 0}/44</td>
                             <td>${Math.round(entry.percentage || 0)}%</td>
                             <td class="${rankClass}">${evaluation}</td>
                             <td><button class="delete-btn" data-doc-id="${entry.id}">Xóa</button></td>
