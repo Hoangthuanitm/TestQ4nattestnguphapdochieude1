@@ -1217,6 +1217,7 @@
 
         let startTime = null;
         let timerInterval = null;
+        
 
         function normalizeString(str) {
             return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -1229,6 +1230,13 @@
             if (percentage >= 20) return 'D';
             return 'F';
         }
+        function shuffleOptions(optionsContainer) {
+    const options = Array.from(optionsContainer.getElementsByClassName('option'));
+    for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        optionsContainer.insertBefore(options[j], options[i + 1] || options[i]);
+    }
+}
 
         function calculateRadioSectionScore(startQuestion, endQuestion, sectionNumber) {
             let score = 0;
@@ -1459,32 +1467,38 @@
         }
 
         document.getElementById('start-test').addEventListener('click', () => {
-            const name = document.getElementById('name').value.trim();
-            const className = document.getElementById('class').value.trim();
-            const dateInput = document.getElementById('date').value;
-            const messageInfo = document.getElementById('message-info');
+    const name = document.getElementById('name').value.trim();
+    const className = document.getElementById('class').value.trim();
+    const dateInput = document.getElementById('date').value;
+    const messageInfo = document.getElementById('message-info');
 
-            if (!name || !className || !dateInput) {
-                messageInfo.textContent = 'Vui lòng điền đầy đủ thông tin: Tên, Lớp, và Ngày.';
-                return;
+    if (!name || !className || !dateInput) {
+        messageInfo.textContent = 'Vui lòng điền đầy đủ thông tin cá nhân.';
+        return;
+    }
+
+    messageInfo.textContent = '';
+    document.getElementById('start-test').style.display = 'none';
+    document.getElementById('history-test').style.display = 'none';
+    document.getElementById('submit-test').style.display = 'block';
+    document.getElementById('timer').style.display = 'block';
+
+    // Hiển thị các phần câu hỏi và trộn đáp án
+    document.querySelectorAll('.question-section').forEach(section => {
+        section.style.display = 'block';
+        // Lặp qua tất cả container options trong section
+        section.querySelectorAll('.options').forEach(optionsContainer => {
+            try {
+                shuffleOptions(optionsContainer); // Gọi shuffleOptions với container
+            } catch (error) {
+                console.error('Lỗi khi trộn đáp án:', error);
             }
-
-                        messageInfo.textContent = '';
-            document.getElementById('start-test').style.display = 'none';
-            document.getElementById('history-test').style.display = 'none';
-            document.querySelectorAll('.question-section').forEach(section => {
-                section.style.display = 'block';
-            });
-            document.getElementById('submit-test').style.display = 'block';
-            document.getElementById('timer').style.display = 'block';
-            startTimer();
         });
+    });
 
+    startTimer();
+});
         document.getElementById('submit-test').addEventListener('click', submitTest);
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // No audio needed for this reading test
-        });
     </script>
 </body>
 </html>
