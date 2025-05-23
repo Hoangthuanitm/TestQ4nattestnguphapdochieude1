@@ -1010,19 +1010,19 @@
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q30-1" name="q30">
-                    <label for="q30-1">1. <ruby>男性<rt>だんせい</rt></ruby>が<ruby>家<rt>いえ</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>をてつだうのがふつうだったから</label>
+                    <label for="q30-1"><ruby>男性<rt>だんせい</rt></ruby>が<ruby>家<rt>いえ</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>をてつだうのがふつうだったから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q30-2" name="q30">
-                    <label for="q30-2">2. お<ruby>金<rt>かね</rt></ruby>のしんぱいをしないで<ruby>家族<rt>かぞく</rt></ruby>が<ruby>安心<rt>あんしん</rt></ruby>して<ruby>生活<rt>せいかつ</rt></ruby>できたから</label>
+                    <label for="q30-2">お<ruby>金<rt>かね</rt></ruby>のしんぱいをしないで<ruby>家族<rt>かぞく</rt></ruby>が<ruby>安心<rt>あんしん</rt></ruby>して<ruby>生活<rt>せいかつ</rt></ruby>できたから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q30-3" name="q30">
-                    <label for="q30-3">3. <ruby>仕事<rt>しごと</rt></ruby>のすきな<ruby>女性<rt>じょせい</rt></ruby>は<ruby>男性<rt>だんせい</rt></ruby>のようにはたらくことができたから</label>
+                    <label for="q30-3"><ruby>仕事<rt>しごと</rt></ruby>のすきな<ruby>女性<rt>じょせい</rt></ruby>は<ruby>男性<rt>だんせい</rt></ruby>のようにはたらくことができたから</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q30-4" name="q30">
-                    <label for="q30-4">4. <ruby>仕事<rt>しごと</rt></ruby>でもらえるお<ruby>金<rt>かね</rt></ruby>が<ruby>少<rt>すく</rt></ruby>なくなっても、<ruby>仕事<rt>しごと</rt></ruby>はなくならなかったから</label>
+                    <label for="q30-4"><ruby>仕事<rt>しごと</rt></ruby>でもらえるお<ruby>金<rt>かね</rt></ruby>が<ruby>少<rt>すく</rt></ruby>なくなっても、<ruby>仕事<rt>しごと</rt></ruby>はなくならなかったから</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-30"></div>
@@ -1054,19 +1054,19 @@
             <div class="options">
                 <div class="option">
                     <input type="radio" id="q32-1" name="q32">
-                    <label for="q32-1">1. <ruby>家族<rt>かぞく</rt></ruby>にお<ruby>金<rt>かね</rt></ruby>のしんぱいをさせないために<ruby>仕事<rt>しごと</rt></ruby>がしたい</label>
+                    <label for="q32-1"><ruby>家族<rt>かぞく</rt></ruby>にお<ruby>金<rt>かね</rt></ruby>のしんぱいをさせないために<ruby>仕事<rt>しごと</rt></ruby>がしたい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q32-2" name="q32">
-                    <label for="q32-2">2. <ruby>子<rt>こ</rt></ruby>どもがうまれたら、<ruby>仕事<rt>しごと</rt></ruby>をやめて<ruby>家<rt>いえ</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>がしたい</label>
+                    <label for="q32-2"><ruby>子<rt>こ</rt></ruby>どもがうまれたら、<ruby>仕事<rt>しごと</rt></ruby>をやめて<ruby>家<rt>いえ</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>がしたい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q32-3" name="q32">
-                    <label for="q32-3">3. おっとは、もっとお<ruby>金<rt>かね</rt></ruby>がもらえるようにがんばってほしい</label>
+                    <label for="q32-3">おっとは、もっとお<ruby>金<rt>かね</rt></ruby>がもらえるようにがんばってほしい</label>
                 </div>
                 <div class="option">
                     <input type="radio" id="q32-4" name="q32">
-                    <label for="q32-4">4. <ruby>仕事<rt>しごと</rt></ruby>がすきなのに、<ruby>男性<rt>だんせい</rt></ruby>のようにはたらけなくてざんねんだ</label>
+                    <label for="q32-4"><ruby>仕事<rt>しごと</rt></ruby>がすきなのに、<ruby>男性<rt>だんせい</rt></ruby>のようにはたらけなくてざんねんだ</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-32"></div>
@@ -1232,9 +1232,16 @@
         }
         function shuffleOptions(optionsContainer) {
     const options = Array.from(optionsContainer.getElementsByClassName('option'));
+    const questionNumber = options[0].querySelector('input').name.replace('q', '');
     for (let i = options.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
+        // Swap DOM elements
         optionsContainer.insertBefore(options[j], options[i + 1] || options[i]);
+        // Update input IDs
+        options.forEach((option, index) => {
+            const input = option.querySelector('input');
+            input.id = `q${questionNumber}-${index + 1}`;
+        });
     }
 }
 
